@@ -1,0 +1,46 @@
+#DNS
+  #add subdomains to file (or use seclists)
+  whois domain.com 
+    #note nameserver
+  dig domain.com
+    #note nameserver
+  for i in $(cat subs.txt); do dig @ns-ip A $i.domain.com | grep -ai 'answer section' -A 2 | tee -a dnsinterrogation.log; done
+
+  nmap --dns-servers ns-op --script dns-brute --script-args dns.brute.domain=domain.com 
+
+-----------------------------------------------------------------------------------------
+
+#User Harvest
+
+li2user
+hunter.io
+website
+
+
+-----------------------------------------------------------------------------------------
+
+#Scan for open ports
+
+masscan
+nmap
+-----------------------------------------------------------------------------------------
+
+#Nikto
+
+
+-----------------------------------------------------------------------------------------
+
+#Sprays
+
+credmaster
+
+travorspray
+
+msol
+
+
+-----------------------------------------------------------------------------------------
+
+#Dorks
+
+
