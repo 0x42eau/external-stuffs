@@ -6,7 +6,7 @@
     #note nameserver
   for i in $(cat subs.txt); do dig @ns-ip A $i.domain.com | grep -ai 'answer section' -A 2 | tee -a dnsinterrogation.log; done
 
-  nmap --dns-servers ns-op --script dns-brute --script-args dns.brute.domain=domain.com 
+  nmap --dns-servers ns-op --script dns-brute --script-args dns.brute.domain=domain.com,dns-brute.threads=6,dns-brute.hostlists=./namelist.txt -sS -p53
 
 -----------------------------------------------------------------------------------------
 
