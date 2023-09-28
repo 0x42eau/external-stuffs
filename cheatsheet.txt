@@ -14,7 +14,8 @@
 
 li2user
 hunter.io
-website
+mega.nz
+phonebook.cz
 
 
 -----------------------------------------------------------------------------------------
@@ -23,6 +24,9 @@ website
 
 masscan
 nmap
+shodan
+centralops
+
 -----------------------------------------------------------------------------------------
 
 #Scan websites
@@ -46,3 +50,4 @@ msol
 #Dorks
 
 
+("@company.name" site:mega.nz) OR (mega "@company.name")
