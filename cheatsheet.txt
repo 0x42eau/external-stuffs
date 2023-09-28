@@ -1,4 +1,8 @@
 #DNS
+  dnsdumpster.com
+  dnsrecon -d domain.com -n 8.8.8.8 -w
+  ARIN.net
+  Shodan.io
   #add subdomains to file (or use seclists)
   whois domain.com 
     #note nameserver
